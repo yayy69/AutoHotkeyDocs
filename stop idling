@@ -1,0 +1,20 @@
+toggle := false
+
+F12::
+toggle := !toggle
+
+if (toggle)
+{
+    SetTimer, LoopKeys, 100
+}
+else
+{
+    SetTimer, LoopKeys, Off
+}
+return
+
+LoopKeys:
+Send, w
+Sleep, 5000
+Send, s
+return
